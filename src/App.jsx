@@ -1,6 +1,6 @@
 import "./App.css";
 
-// ! Component
+// ! Component and using Props
 
 function App() {
   return (
