@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>What is component?</h1>
+    <p>
+      Component is a building block of website. এইটা কোন website এর ছোট অংশ।
+    </p>
+    <p>Structure of component is following:</p>
+    <p>
+      export default function Profile(){
+      <br />
+      return
+      <img src="" alt="" srcset="" /> <br />
+      }
+      <p>Note: এখানে component এর ক্ষেত্রে function এর নাম এর first letter টা capital হবে। e.g Profile. একটা component এর ভিতরে আলাদা কোন component use করা হয় না। আর যদি করা হয় তাহলে performance issue হয়।</p>
+    </p>
+    <h3>Advantage</h3>
+    <ol>
+      <li>Code reusability: বার বার usr করতে পারা।</li>
+      <li>Fast development</li>
+    </ol>
+    <br>
+    <h1>What is JSX?</h1>
+    <p>JSX stands for JavaScript XML = JSX</p>
+    <h3>How JSX Works?</h3>
+    <p>JSX File ->  JSX Compiler (like Babel) -> converts to JavaScript file -> create a Virtual DOM using JS file -> then compare if any changes occures</p>
+    <h3>Rules of JSX</h3>
+    <ul>
+      <li>It returns a single element like function. ণিচে একটা single div return করতেসে। i.e img</li>
+
+      <div>
+        <p>
+          export default function Profile(){
+          <br />
+          return
+          <br>
+          div
+
+            img src="" alt="" srcset="" /> <br />
+          }
+        div
+        </p>
+      </div>
+      <li>Or you can return multiple element. নিম্নে multiple element return করতেসে i.e h1 & img একটা fragment or self closing tag এর মধ্যে <> </>।
+      </li>
+      <div>
+        <p>
+          export default function Profile(){
+            return
+            <>
+          <br>
+           h1 Hello h1
+          <br>
+
+           img src="" alt="" srcset="" /> img <br />
+          }
+        </>
+        </p>
+      </div>
+      <li>Template string এর পরিবর্তে এখানে curly braces use করতে হয়।</li>
+    </ul>
+    <p>Now go to app.jsx for some example</p>
+  </body>
+</html>
