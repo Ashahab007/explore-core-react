@@ -1,6 +1,7 @@
 import "./App.css";
 
 // ! Component and using Props
+// Props came from properties
 
 function App() {
   return (
@@ -16,6 +17,8 @@ function App() {
       <Developer name="Shabana" tech="Java"></Developer>
       <Product prodName="Mobile" model="xiomi" price="15000"></Product>
       <Product prodName="Laptop" model="Lenovo" price="45000"></Product>
+      <Employee empName="Sam" id="5903"></Employee>
+      <Employee empName="Sanuar"></Employee>
     </>
   );
 }
@@ -72,6 +75,7 @@ function Food() {
 }
 
 //? Creating sixth component and styling it directly to the component in another way & creating dynamic Developer name using props. For this u have to pass props as a parameter in a function to make it dynamic.
+//? Note: Props are readonly i.e they are immutable
 
 function Developer(props) {
   console.log(props);
@@ -108,6 +112,19 @@ function Product(props) {
       <p>Product Name: {props.prodName}</p>
       <p>Model: {props.model} </p>
       <p>Price: {props.price} </p>
+    </div>
+  );
+}
+
+//? Creating eighth component and passing the props as destructure and set the dynamic value
+
+function Employee({ empName, id = 0 }) {
+  // যদি কোন component এর destructured value না থাকে সেক্ষেত্রে default value হিসেবে 0 pass করা হয়েছে।
+  return (
+    <div className="student">
+      <h3>Employee</h3>
+      <p>Name: {empName}</p>
+      <p>Id: {id}</p>
     </div>
   );
 }
